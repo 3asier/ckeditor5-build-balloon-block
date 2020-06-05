@@ -31,6 +31,8 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+import TrackChanges from '@ckeditor/ckeditor5-track-changes/src/trackchanges';
+
 import '../theme/theme.css';
 
 export default class BalloonEditor extends BalloonEditorBase {}
@@ -60,7 +62,8 @@ BalloonEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	TrackChanges
 ];
 
 // Editor configuration.
@@ -83,11 +86,7 @@ BalloonEditor.defaultConfig = {
 		'redo'
 	],
 	toolbar: {
-		items: [
-			'bold',
-			'italic',
-			'link'
-		]
+		items: [ 'bold', 'italic', 'link' ]
 	},
 	image: {
 		toolbar: [
@@ -98,11 +97,7 @@ BalloonEditor.defaultConfig = {
 		]
 	},
 	table: {
-		contentToolbar: [
-			'tableColumn',
-			'tableRow',
-			'mergeTableCells'
-		]
+		contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
