@@ -31,6 +31,7 @@
 		</div>
 		<div class="centered">
 			<div class="row row-editor">
+        <div class="document-editor__toolbar"></div>
 				<div class="editor">
 					<h2>Bilingual Personality Disorder</h2>
 					<figure class="image image-style-side"><img src="https://c.cksource.com/a/1/img/docs/sample-image-bilingual-personality-disorder.jpg">
@@ -104,51 +105,15 @@
 	</footer>
 	<script src="../build/ckeditor.js"></script>
 	<script>BalloonEditor
-			.create( document.querySelector( '.editor' ), {
-				toolbar: {
-					items: [
-						'heading',
-						'|',
-						'bold',
-						'italic',
-						'link',
-						'bulletedList',
-						'numberedList',
-						'|',
-						'indent',
-						'outdent',
-						'|',
-						'imageUpload',
-						'blockQuote',
-						'insertTable',
-						'mediaEmbed',
-						'undo',
-						'redo',
-						'|',
-						'comment'
-					]
-				},
-				language: 'en',
-				image: {
-					toolbar: [
-						'imageTextAlternative',
-						'imageStyle:full',
-						'imageStyle:side'
-					]
-				},
-				table: {
-					contentToolbar: [
-						'tableColumn',
-						'tableRow',
-						'mergeTableCells'
-					]
-				},
-				licenseKey: 'NikKq1jxBbPmsRmaKOs92qC2R/7qRN+r8TJNojfBlGxeqHwkXFfK3Bo=',
-				sidebar: {
-				container: document.querySelector( '.sidebar' )
-			},
-			} )
+			.create( document.querySelector( '.editor' ))
 			.then( editor => {
+        const toolbarContainer = document.querySelector(
+        ".document-editor__toolbar"
+      );
+
+      toolbarContainer.appendChild(editor.ui.view.toolbar.element);
+
+
 				window.editor = editor;
 		
 				// Learn more about users on https://ckeditor.com/docs/ckeditor5/latest/features/collaboration/users.html.
