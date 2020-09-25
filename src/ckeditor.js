@@ -2,7 +2,7 @@
  * @license Copyright (c) 2014-2020, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
-import DecoupledEditor from "@ckeditor/ckeditor5-editor-decoupled/src/decouplededitor.js";
+import BalloonEditor from "@ckeditor/ckeditor5-editor-balloon/src/ballooneditor.js";
 import Essentials from "@ckeditor/ckeditor5-essentials/src/essentials";
 import Alignment from "@ckeditor/ckeditor5-alignment/src/alignment";
 import FontSize from "@ckeditor/ckeditor5-font/src/fontsize";
@@ -37,7 +37,7 @@ import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformatio
 import Comments from "@ckeditor/ckeditor5-comments/src/comments.js";
 import TrackChanges from "@ckeditor/ckeditor5-track-changes/src/trackchanges.js";
 
-class Editor extends DecoupledEditor {}
+class Editor extends BalloonEditor {}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
