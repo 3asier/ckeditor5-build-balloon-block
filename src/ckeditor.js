@@ -110,6 +110,7 @@ Editor.defaultConfig = {
 			"redo",
 			"|",
 			"comment",
+			"trackChanges",
 		],
 	},
 	image: {
